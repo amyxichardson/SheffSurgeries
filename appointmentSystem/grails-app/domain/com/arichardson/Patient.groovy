@@ -9,6 +9,12 @@ class Patient {
     Date patientDob
     Date dateRegistered
     String patientPhone
+    Doctor doctor
+    Surgery surgery
+
+    String toString(){
+    return patientName
+    }
 
     static constraints = {
 // declaring constraints
@@ -19,5 +25,11 @@ class Patient {
     patientDob blank: false, nullable: false
     dateRegistered blank: false, nullable: false
     patientPhone blank: false, nullable: false
+    doctor blank: false, nullable: false
+    surgery blank: false, nullable: false
     }
+
+// defining the relationships
+static hasMany = [prescription:Prescription, surgery:Surgery, doctor:Doctor]
+
 }
