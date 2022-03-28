@@ -5,6 +5,7 @@ class BootStrap {
     def init = { servletContext ->
 // examples for data of all domain classes
 
+/*
       def appointment1=new com.arichardson.Appointment(
       appointmentID:1,
       appDate:new Date('11/04/2021'),
@@ -83,7 +84,7 @@ class BootStrap {
       openingTime:'09:00-17:00hrs'
       ).save()
 
-
+*/
     }
     def destroy = {
     }
