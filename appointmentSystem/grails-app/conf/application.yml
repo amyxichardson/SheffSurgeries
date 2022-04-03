@@ -117,12 +117,12 @@ environments:
             url: jdbc:mysql://localhost:3306/appointmentSystem
     test:
         dataSource:
-            dbCreate: update
-            url:
+            dbCreate: create-drop
+            url: jdbc:mysql://localhost:3306/appointmentSystemTest
     production:
         dataSource:
-            dbCreate: update
-            url: 
+            dbCreate: create-drop
+            url: jdbc:mysql://localhost:3306/appointmentSystemDevelop
             properties:
                 jmxEnabled: true
                 initialSize: 5
