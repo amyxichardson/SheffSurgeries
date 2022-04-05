@@ -33,7 +33,12 @@ font-size: 25px;}
 <button type="button" class="button">
 <g:link controller="patient" action="create">Add Patients</g:link>
 </button>
-
+<button type="button" class="button">
+<g:link controller="patient" action="search">Patient Search (simple)</g:link>
+</button>
+<button type="button" class="button">
+<g:link controller="patient" action="advSearch">adv Patient Search</g:link>
+</button>
 </div>
 </br>
 
@@ -48,6 +53,7 @@ font-size: 25px;}
 </button>
 </div>
 </br>
+
 <div class="third">
 <h3>Nurses</h3>
 <p>Add, view, delete nurses</p></br>
@@ -59,6 +65,7 @@ font-size: 25px;}
 </button>
 </div>
 </br>
+
 <div class="fourth">
 <h3>Receptionists</h3>
 <p>Add, view, delete receptionists</p></br>
@@ -69,6 +76,7 @@ font-size: 25px;}
 <g:link controller="receptionist" action="create">Add receptionists</g:link>
 </button>
 </div>
+
 </div>
 </div>
 </body>

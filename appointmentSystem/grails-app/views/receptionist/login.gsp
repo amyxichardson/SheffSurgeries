@@ -11,22 +11,41 @@ font-family: monospace;
 font-size:35px;
 line-height: 1.5;}
 </style> 
-</head>  
+</head>
+<body>
 
-<body>    
-</br>
-</br>
-<g:if test="${session.user}">
-<br/>
+<g:if test="${flash.message}">
+
+ <div class="message">${flash.message}</div>
+
 </g:if>
-<g:else>
-<g:form controller="receptionist" action="login" style="padding-left:200px">    
-<div style="width:220px">        
-<label>Username:</label> <input type="text" name="username"/> </br>       
-<label>Password:</label> <input type="password" name="password"/>        
-<label>&nbsp;</label> <input type="submit" value="Login"/>    
-</div>    
-</g:form> 
-</g:else>
-</body> 
+
+<g:form action ="validate">
+
+ <input type="hidden" name="cName" value="${cName}">
+
+ <input type="hidden" name="aName" value="${aName}">
+
+       <table>
+        <tr class="prop">
+          <td class="name">
+            <label for="username">Username:</label>
+          </td>
+          <td class="value">
+            <input type="text" id="username" name="username" value="">
+          </td></tr>
+        <tr class="prop">
+          <td class="name">
+            <label for="password">Password:</label>
+          </td>
+          <td class="value">
+            <input type="password" id="password" name="password" value="">
+          </td></tr>
+        <tr><td></td>
+          <td>
+            <input type="submit" value="login"/>
+          </td></tr>
+      </table>
+    </g:form>
+  </body>
 </html>
