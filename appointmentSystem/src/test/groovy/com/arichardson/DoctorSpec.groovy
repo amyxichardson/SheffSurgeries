@@ -1,18 +1,65 @@
 package com.arichardson
 
-import grails.testing.gorm.DomainUnitTest
+
+import grails.testing.mixin.integration.Integration
+import grails.gorm.transactions.Rollback
 import spock.lang.Specification
+import org.hibernate.SessionFactory
 
-class DoctorSpec extends Specification implements DomainUnitTest<Doctor> {
+@Integration
+@Rollback
+class DoctorServiceSpec extends Specification {
 
-    def setup() {
+    DoctorService doctorService
+    SessionFactory sessionFactory
+
+    private Long setupData() {
+        // TODO: Populate valid domain instances and return a valid ID
+        //new Doctor(...).save(flush: true, failOnError: true)
+        //new Doctor(...).save(flush: true, failOnError: true)
+        //Doctor doctor = new Doctor(...).save(flush: true, failOnError: true)
+        //new Doctor(...).save(flush: true, failOnError: true)
+        //new Doctor(...).save(flush: true, failOnError: true)
+        assert false, "TODO: Provide a setupData() implementation for this generated test suite"
+        //doctor.id
     }
 
-    def cleanup() {
+    void "test get"() {
+        setupData()
+
+        expect:
+        doctorService.get(1) != null
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test list"() {
+        setupData()
+
+        when:
+        List<Doctor> doctorList = doctorService.list(max: 2, offset: 2)
+
+        then:
+        doctorList.size() == 2
+        assert false, "TODO: Verify the correct instances are returned"
     }
-}
+
+    void "test count"() {
+        setupData()
+
+        expect:
+        doctorService.count() == 5
+    }
+
+    void "test delete"() {
+        Long doctorId = setupData()
+
+        expect:
+        doctorService.count() == 5
+
+        when:
+        doctorService.delete(doctorId)
+        sessionFactory.currentSession.flush()
+
+        then:
+        doctorService.count() == 4
+    }
+

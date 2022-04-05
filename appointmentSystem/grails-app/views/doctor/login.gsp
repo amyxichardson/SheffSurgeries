@@ -2,7 +2,7 @@
 <html> 
 <head>     
 <meta name="layout" content="main"/>     
-<title>Login to appointment system (Receptionist)</title>     
+<title>Login to appointment system (Doctor)</title>     
 <style>         
 body{
 background-color: #B0E0E6;
@@ -29,10 +29,10 @@ line-height: 1.5;}
        <table>
         <tr class="prop">
           <td class="name">
-            <label for="username">Username:</label>
+            <label for="email">Email:</label>
           </td>
           <td class="value">
-            <input type="text" id="username" name="username" value="">
+            <input type="text" id="email" name="email" value="">
           </td></tr>
         <tr class="prop">
           <td class="name">

@@ -17,7 +17,8 @@
 <body>
 
 
-<g:loginToggle />
+<g:receploginToggle />
+<g:docloginToggle />
 <g:layoutBody/>
 
 
