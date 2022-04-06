@@ -117,7 +117,16 @@ class ReceptionistController {
             '*'{ render status: NOT_FOUND }
         }
     }
+    def upload = {
+
+    def f = request.getFile('filecsv')
+    if (f.empty) {
+        flash.message = 'file cannot be empty'
+        render(view: 'list')
+        return
+    }
+
+    File fileDest = new File("/home/labstudent/assignment2/sheffSurgeries/appointmentSystem/grails-app/assets/file_name.csv")
+    f.transferTo(fileDest)
+    response.sendError(200)}
 }
-
-
-

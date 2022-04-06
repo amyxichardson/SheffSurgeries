@@ -73,6 +73,17 @@ font-size: 25px;}
 <g:link controller="receptionist" action="create">Add receptionists</g:link>
 </button>
 </div>
+</br>
+
+<div class = "fifth">
+<h3> File Upload </h3>
+<g:form action="upload" enctype="multipart/form-data" useToken="true">
+<span class="button">                   
+<input type="file" name="filecsv"/>
+<input type="submit" class="upload" value="upload"/>
+</span>
+</g:form>
+</div>
 
 </div>
 </div>
