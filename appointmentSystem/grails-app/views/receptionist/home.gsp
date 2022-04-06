@@ -26,7 +26,7 @@ font-size: 25px;}
 
 <div class="first">
 <h3>Patients</h3>
-<p>Add, view, delete patients</p></br>
+<p>Add, view, assign, delete patients</p></br>
 <button type="button" class="button">
 <g:link controller="patient" action="index">Patient list</g:link>
 </button>
@@ -34,10 +34,7 @@ font-size: 25px;}
 <g:link controller="patient" action="create">Add Patients</g:link>
 </button>
 <button type="button" class="button">
-<g:link controller="patient" action="search">Patient Search (simple)</g:link>
-</button>
-<button type="button" class="button">
-<g:link controller="patient" action="advSearch">adv Patient Search</g:link>
+<g:link controller="patient" action="advSearch">Patient Search</g:link>
 </button>
 </div>
 </br>
@@ -49,14 +46,14 @@ font-size: 25px;}
 <g:link controller="doctor" action="index">Doctor list</g:link>
 </button>
 <button type="button" class="button">
-<g:link controller="doctor" action="create">Doctors create</g:link>
+<g:link controller="doctor" action="create">Add Doctors</g:link>
 </button>
 </div>
 </br>
 
 <div class="third">
 <h3>Nurses</h3>
-<p>Add, view, delete nurses</p></br>
+<p>Add, view, assign, delete nurses</p></br>
 <button type="button" class="button">
 <g:link controller="nurse" action="index">Nurse list</g:link>
 </button>

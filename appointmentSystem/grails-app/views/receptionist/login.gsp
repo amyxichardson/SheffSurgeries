@@ -10,10 +10,15 @@ text-align: center;
 font-family: monospace;
 font-size:35px;
 line-height: 1.5;}
+.title{
+font-size: 60px;}
 </style> 
 </head>
 <body>
-
+<div class="title">
+<h1>Sheffield Surgery Group | Receptionist Login</h1>
+</div>
+</br>
 <g:if test="${flash.message}">
 
  <div class="message">${flash.message}</div>

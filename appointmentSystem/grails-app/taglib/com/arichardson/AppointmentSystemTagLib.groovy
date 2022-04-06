@@ -39,7 +39,9 @@ class AppointmentSystemTagLib {
         out << "</div><br/>"}
 
     def appointmentNumber = {
-    out << "<div class='appointment-count'>"
+    out << "<div style='float:center;' class='appointment-count'>"
     out << "<p>There are ${Appointment.count()} appointments in the system.</p>"
+    out <<"<a href='${createLink(controller:'Appointment', action:'index')}'>"
+    out << "View Appointments </a>"
     out <<"</div>"}
 }

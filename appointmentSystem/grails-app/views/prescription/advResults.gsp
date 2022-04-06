@@ -4,7 +4,7 @@
 <meta name="layout" content="main"/>     
 <title>Doctor | Adv Prescription Search</title>     
 <style>         
-body{
+.results{
 text-align: center;
 font-family: monospace;
 font-size:35px;
@@ -14,7 +14,6 @@ padding-left: 50px}
 </head> 
 <body>
  
-    <div class="row">
         <div class="results">
             <h1> Prescription Search </h1>
             <h3> Advanced Results </h3>
@@ -29,7 +28,7 @@ padding-left: 50px}
             <g:link action='advSearch'>Search Again</g:link>
             </button>
         </div
-    </div>
+
 </body>
 </html>
 

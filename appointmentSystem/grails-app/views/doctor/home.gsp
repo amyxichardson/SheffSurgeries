@@ -51,7 +51,7 @@ font-size: 25px;}
 
 <div class="third">
 <h3>Appointments</h3>
-<p>AView Appointments</p></br>
+<p>View Appointments</p></br>
 <button type="button" class="button">
 <g:link controller="appointment" action="index">Appointment list</g:link>
 </button>
