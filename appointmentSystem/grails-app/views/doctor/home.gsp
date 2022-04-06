@@ -23,7 +23,7 @@ font-size: 25px;}
 <h1>Doctor | Homepage</h1>
 <div id="content" role="main">
 
-
+<g:appointmentNumber/>
 <div class="first">
 <h3>Prescriptions</h3>
 <p>Add, view, delete prescriptions</p></br>
