@@ -2,7 +2,7 @@
 <html> 
 <head>     
 <meta name="layout" content="main"/>     
-<title>Receptionist | Adv Patient Search</title>     
+<title>Doctor | Adv Prescription Search</title>     
 <style>         
 body{
 text-align: center;
@@ -16,13 +16,13 @@ padding-left: 50px}
  
     <div class="row">
         <div class="results">
-            <h1> Patient Search </h1>
+            <h1> Prescription Search </h1>
             <h3> Advanced Results </h3>
-            <p> Searched for patients matching <em>${term}</em>. Found <strong>${patients.size()}</strong> patients.
+            <p> Searched for prescriptions matching <em>${term}</em>. Found <strong>${prescriptions.size()}</strong> prescriptions.
             </p>
             <ul>
-                <g:each var="patient" in="${patients}">
-                    <li><g:link controller="patient" action="show" id="${patient.id}">${patient.patientName}</g:link></li>
+                <g:each var="prescription" in="${prescriptions}">
+                    <li><g:link controller="prescription" action="show" id="${prescription.id}">${prescription.prescripNumber}</g:link></li>
                 </g:each>
             </ul>
             <button type="button" class="btn">

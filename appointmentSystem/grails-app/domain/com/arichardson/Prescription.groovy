@@ -5,11 +5,12 @@ class Prescription {
     String prescripNumber
     String pharmacyName
     String medicine
-    float totalCost
+    String totalCost
     Date dateIssued
     Boolean patientPaying
     Patient patient
     Doctor doctor
+    String daysOfSupply
 
     String toString(){
     return prescripNumber
@@ -25,6 +26,7 @@ class Prescription {
     patientPaying blank: false, nullable: false
     patient blank:false, nullable: false
     doctor blank:false, nullable: false    
+    daysOfSupply blank:false, nullable: false    
 } 
 
 // defining the relationships

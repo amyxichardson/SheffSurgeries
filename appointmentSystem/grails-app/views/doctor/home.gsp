@@ -33,7 +33,10 @@ font-size: 25px;}
 <button type="button" class="button">
 <g:link controller="prescription" action="create">Add Prescription</g:link>
 </button>
-
+</button>
+<button type="button" class="button">
+<g:link controller="prescription" action="advSearch">Advanced Prescription Search</g:link>
+</button>
 </div>
 </br>
 
