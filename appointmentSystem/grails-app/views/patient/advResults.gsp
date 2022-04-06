@@ -22,7 +22,7 @@ Found <strong>${patients.size()}</strong> patients.
 </p>
 <ul>
 <g:each var="patient" in="${patients}">
-<li><g:link controller="patient" action="show"
+<li><g:link controller="Patient" action="show"
 id="${patient.id}">${patient.patientName}</g:link></li>
 </g:each>
 </ul>

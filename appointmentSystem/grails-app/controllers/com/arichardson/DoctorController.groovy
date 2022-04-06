@@ -4,9 +4,9 @@ import static org.springframework.http.HttpStatus.*
 
 class DoctorController {
 
-    DoctorService doctorService
-
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+ //   DoctorService doctorService
+      def scaffold=Doctor
+//    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def login(){}
 
@@ -30,7 +30,7 @@ class DoctorController {
         redirect(uri:'/')
     }
 
-    def index(Integer max) {
+/*    def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond doctorService.list(params), model:[doctorCount: doctorService.count()]
     }
@@ -116,7 +116,7 @@ class DoctorController {
             }
             '*'{ render status: NOT_FOUND }
         }
-    }
+    }*/
 }
 
 

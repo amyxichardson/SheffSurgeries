@@ -39,7 +39,7 @@ padding-left: 50px}
 <td>Query Type:</td>
 <td><g:radioGroup name="queryType" labels="['And','Or','Not']"
 values="['And','Or','Not']"value="and">
-${it.radio}${it.label}
+${it.radio} ${it.label}
 </g:radioGroup>
 </td>
 </tr>
